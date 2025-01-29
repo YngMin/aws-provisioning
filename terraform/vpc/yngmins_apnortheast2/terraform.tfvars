@@ -22,13 +22,10 @@ shard_short_id = "yngmin01s"
 # d means develop
 env_suffix = "s"
 
-# Peering List
-vpc_peering_list = [
+peering_requests = [
   {
-    peer_vpc_id   = "vpc-0aea761f0a342f2f6"
-    peer_owner_id = "816736805842"
-    peer_region   = "ap-northeast-2"
-    peer_vpc_name = "yngmins_apnortheast2"
-    vpc_cidrs     = ["10.11.0.0/16"]
-  }
+    "id"         = "pcx-0684fc5b32b32c285"
+    "vpc_name"   = "yngmind_apnortheast2"
+    "cidr_block" = "10.10.0.0/16"
+  },
 ]

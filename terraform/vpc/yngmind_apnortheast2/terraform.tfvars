@@ -25,10 +25,10 @@ env_suffix = "d"
 # Peering List
 vpc_peering_list = [
   {
-    peer_vpc_id   = "vpc-0aea761f0a342f2f6"
-    peer_owner_id = "816736805842"
+    peer_vpc_id   = "vpc-037d587d37c808128"
+    peer_owner_id = "809173669271"
     peer_region   = "ap-northeast-2"
-    peer_vpc_name = "yngmind_apnortheast2"
+    peer_vpc_name = "yngmins_apnortheast2"
     vpc_cidrs     = ["10.11.0.0/16"]
   }
 ]
