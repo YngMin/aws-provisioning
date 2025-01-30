@@ -117,3 +117,7 @@ variable "desired_capacity" {
   default     = 1
 }
 
+variable "bastion_aware_sg_id" {
+  description = ""
+  type = string
+}

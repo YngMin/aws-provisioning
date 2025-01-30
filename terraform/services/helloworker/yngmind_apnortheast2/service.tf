@@ -20,6 +20,7 @@ module "helloworker" {
   target_vpc               = data.terraform_remote_state.vpc.outputs.vpc_id
   vpc_name                 = data.terraform_remote_state.vpc.outputs.vpc_name
   billing_tag              = data.terraform_remote_state.vpc.outputs.billing_tag
+  bastion_aware_sg_id = data.terraform_remote_state.vpc.outputs.aws_security_group_bastion_aware_id
 
   # Domain Name 
   # This will be the prefix of record 
@@ -45,5 +46,9 @@ module "helloworker" {
     "0.0.0.0/0"
   ]
 
-  key_name = "inflearn-default-key"
+  key_name = "hello"
+
+  min_size = var.asg_min_size
+  max_size = var.asg_max_size
+  desired_capacity = var.asg_desired_capacity
 }
