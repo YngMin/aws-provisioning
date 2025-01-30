@@ -109,7 +109,6 @@ resource "aws_lb" "internal" {
   ]
 
   tags = var.lb_variables.external_lb.tags[var.shard_id]
-
 }
 
 
@@ -133,7 +132,6 @@ resource "aws_lb_target_group" "internal" {
   }
 
   tags = var.lb_variables.internal_lb_tg.tags[var.shard_id]
-
 }
 
 resource "aws_lb_listener" "internal_80" {
