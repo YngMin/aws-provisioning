@@ -1,4 +1,4 @@
-locals {
+/*locals {
   private_subnet_peerings = flatten([
     for pair in setproduct(aws_route_table.private.*.id, var.peering_requests) : {
       route_table_id = pair[0]
@@ -14,4 +14,4 @@ resource "aws_route" "private_peering" {
   route_table_id            = each.value.route_table_id
   destination_cidr_block    = each.value.cidr_block
   vpc_peering_connection_id = each.value.peering_id
-}
+}*/

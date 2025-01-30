@@ -27,8 +27,8 @@ module "hello" {
   domain_name = "hello"
 
   # Route53 variables
-  acm_external_ssl_certificate_arn = var.r53_variables.id.star_devart_tv_acm_arn_apnortheast2
-  route53_external_zone_id         = var.r53_variables.id.devart_tv_zone_id
+  acm_external_ssl_certificate_arn = var.r53_variables.yngmin.acm_arn_apnortheast2
+  route53_external_zone_id         = var.r53_variables.yngmin.zone_id
 
   # Resource LoadBalancer variables
   lb_variables = var.lb_variables
@@ -44,4 +44,5 @@ module "hello" {
   ext_lb_ingress_cidrs = [
     "0.0.0.0/0"
   ]
+
 }

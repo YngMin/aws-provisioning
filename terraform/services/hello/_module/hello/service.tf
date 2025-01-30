@@ -112,7 +112,6 @@ resource "aws_lb_target_group" "external" {
   }
 
   tags = var.lb_variables.external_lb_tg.tags[var.shard_id]
-
 }
 
 
@@ -169,4 +168,3 @@ resource "aws_route53_record" "external_dns" {
     evaluate_target_health = true
   }
 }
-
