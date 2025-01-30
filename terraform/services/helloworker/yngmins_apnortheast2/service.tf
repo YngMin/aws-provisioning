@@ -45,5 +45,7 @@ module "helloworker" {
     "0.0.0.0/0"
   ]
 
-  key_name = "inflearn-default-key"
+  key_name = "hello"
+
+  bastion_aware_sg_id = data.terraform_remote_state.vpc.outputs.aws_security_group_bastion_aware_id
 }
