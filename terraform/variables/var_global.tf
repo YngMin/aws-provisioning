@@ -87,6 +87,17 @@ variable "remote_state" {
         key    = "devart/terraform/vpc/eksd_useast1/terraform.tfstate"
       }
 
+      yngmindapne2 = {
+        region = "ap-northeast-2"
+        bucket = "yngmin-apnortheast2-tfstate"
+        key    = "yngmin/terraform/vpc/yngmind_apnortheast2/terraform.tfstate"
+      }
+
+      yngminsapne2 = {
+        region = "ap-northeast-2"
+        bucket = "yngmin-apnortheast2-tfstate"
+        key    = "yngmin/terraform/vpc/yngmins_apnortheast2/terraform.tfstate"
+      }
     }
     security_group = {
       id = {

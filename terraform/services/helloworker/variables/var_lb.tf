@@ -6,6 +6,8 @@ variable "lb_variables" {
       devartsapne2 = 0
       artdapne2 = 0
       artpapne2 = 0
+      yngmindapne2 = 0
+      yngminsapne2 = 0
     }
 
     target_group_deregistration_delay = {
@@ -13,6 +15,8 @@ variable "lb_variables" {
       devartsapne2 = 0
       artdapne2 = 60
       artpapne2 = 60
+      yngmindapne2 = 0
+      yngminsapne2 = 0
     }
 
     external_lb = {
@@ -85,7 +89,23 @@ variable "lb_variables" {
           project = "helloworker"
           env     = "prod"
           stack   = "artp_apnortheast2"
-        }
+        },
+
+        yngmindapne2 = {
+          Name    = "helloworker-yngmind_apnortheast2-internal-lb"
+          app     = "helloworker"
+          project = "helloworker"
+          env     = "dev"
+          stack   = "yngmind_apnortheast2"
+        },
+
+        yngminsapne2 = {
+          Name    = "helloworker-yngmins_apnortheast2-internal-lb"
+          app     = "helloworker"
+          project = "helloworker"
+          env     = "stage"
+          stack   = "yngmins_apnortheast2"
+        },
       }
     }
 
@@ -159,6 +179,21 @@ variable "lb_variables" {
           project = "helloworker"
           env     = "prod"
           stack   = "artp_apnortheast2"
+        },
+        yngmindapne2 = {
+          Name    = "helloworker-yngmind_apnortheast2-internal-tg"
+          app     = "helloworker"
+          project = "helloworker"
+          env     = "dev"
+          stack   = "yngmind_apnortheast2"
+        },
+
+        yngminsapne2 = {
+          Name    = "helloworker-yngmins_apnortheast2-internal-tg"
+          app     = "helloworker"
+          project = "helloworker"
+          env     = "stage"
+          stack   = "yngmins_apnortheast2"
         }
       }
     }

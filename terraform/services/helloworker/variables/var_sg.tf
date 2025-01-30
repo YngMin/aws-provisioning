@@ -106,7 +106,22 @@ variable "sg_variables" {
           project = "helloworker"
           env     = "prod"
           stack   = "artp_apnortheast2"
-        }
+        },
+        yngmindapne2 = {
+          Name    = "helloworker-yngmind_apnortheast2-internal-lb-sg"
+          app     = "helloworker"
+          project = "helloworker"
+          env     = "dev"
+          stack   = "yngmind_apnortheast2"
+        },
+
+        yngminsapne2 = {
+          Name    = "helloworker-yngmins_apnortheast2-internal-lb-sg"
+          app     = "helloworker"
+          project = "helloworker"
+          env     = "stage"
+          stack   = "yngmins_apnortheast2"
+        },
       }
     }
   }
